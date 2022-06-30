@@ -1,0 +1,42 @@
+.button {
+	background-color: hsl(252 100% 80%);
+	margin-right: 2em;
+	margin-bottom: 2em;
+	position: relative;
+	transition: transform 200ms ease-out;
+}
+.button:active {
+	transform: scale(0.95);
+}
+.button::after {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	width: calc(100% - 22px);
+	height: 2.5px;
+	background-color: hsl(252 100% 60%);
+	transform: translateX(-50%) scaleX(0);
+	transform-origin: right;
+	transition: transform 200ms ease-out;
+}
+.button::before {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	width: calc(100% - 22px);
+	height: 2.5px;
+	background-color: hsl(182 100% 60%);
+	transform: translateX(-50%) scaleX(0);
+	transform-origin: right;
+	transition: transform 200ms ease-out 190ms;
+}
+.button:focus-visible::after {
+	transform: translateX(-50%) scaleX(1);
+	transform-origin: left;
+}
+.button:focus-visible::before {
+	transform: translateX(-50%) scaleX(1);
+	transform-origin: left;
+}
