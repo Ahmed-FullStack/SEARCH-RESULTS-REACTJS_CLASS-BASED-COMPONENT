@@ -35,3 +35,7 @@
 .clr-white {
 	color: #fff;
 }
+.word-break {
+	width: min(90%, 600px);
+	word-wrap: break-word;
+}
